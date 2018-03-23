@@ -11,4 +11,8 @@ def hello():
 def bitcoin():
     return render_template("bitcoin.html")
 
+@app.route("/weather")
+def weather():
+    return render_template("weather.html")
+
 app.run()

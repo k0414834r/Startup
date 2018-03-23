@@ -50,7 +50,7 @@ $(document).ready(function (){
                 }
             },
             series: [{
-                name: 'Btcoin',
+                name: 'Bitcoin',
                 data: Object.values(bpi)
             }, {
                 name: 'Baseline',
