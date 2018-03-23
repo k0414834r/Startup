@@ -23,14 +23,18 @@ $(document).ready(function (){
         var highs = []
         var lows = []
         var dates = []
+        var days = []
         for (let i of forecast){
             highs.push(parseInt(i.high))
             lows.push(parseInt(i.low))
             dates.push(i.date)
+            days.push(i.day)
         }
+
         console.log(highs);
         console.log(lows.join);
         console.log(dates);
+        console.log(days);
 
         Highcharts.chart('container1', {
             chart: {
@@ -60,10 +64,12 @@ $(document).ready(function (){
             },
             series: [{
                 name: 'Highs',
-                data: highs
+                data: highs,
+                color: '#f28f43'
             }, {
                 name: 'Lows',
-                data: lows
+                data: lows,
+                color: '#2f7ed8'
             }]
         });
     };
